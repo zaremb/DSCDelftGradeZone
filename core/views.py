@@ -14,5 +14,6 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
 
 class GradeViewSet(viewsets.ModelViewSet):
+    filterset_fields   = ['user', 'value', 'date_added', 'course']
     queryset = Grade.objects.all()
     serializer_class = GradeSerializer
